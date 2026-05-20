@@ -2,6 +2,7 @@
 
   <defs>
 
+    <!-- Glow -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
@@ -12,70 +13,79 @@
 
   </defs>
 
-  <!-- Cuerpo -->
+  <!-- CUERPO EXTERNO -->
   <circle cx="150"
           cy="150"
           r="95"
           fill="#334155"
-          stroke="#22c55e"
+          stroke="#64748b"
           stroke-width="8"/>
 
-  <!-- Aro -->
+  <!-- ARO INTERNO -->
   <circle cx="150"
           cy="150"
-          r="65"
+          r="68"
           fill="none"
-          stroke="#22c55e"
-          stroke-width="4"
-          opacity="0.5"/>
+          stroke="currentColor"
+          stroke-width="5"
+          opacity="0.7"/>
 
-  <!-- Aspas -->
+  <!-- ASPAS -->
   <g transform="translate(150 150)">
 
     <g>
 
+      <!-- ROTACION -->
       <animateTransform attributeName="transform"
                          type="rotate"
                          from="0"
                          to="360"
-                         dur="3s"
+                         dur="2.5s"
                          repeatCount="indefinite"/>
 
-      <ellipse cx="0" cy="-38"
-               rx="14"
-               ry="42"
-               fill="#22c55e"/>
+      <!-- ASPA ARRIBA -->
+      <ellipse cx="0"
+               cy="-42"
+               rx="15"
+               ry="46"
+               fill="currentColor"/>
 
-      <ellipse cx="38" cy="0"
-               rx="42"
-               ry="14"
-               fill="#22c55e"/>
+      <!-- ASPA DERECHA -->
+      <ellipse cx="42"
+               cy="0"
+               rx="46"
+               ry="15"
+               fill="currentColor"/>
 
-      <ellipse cx="0" cy="38"
-               rx="14"
-               ry="42"
-               fill="#22c55e"/>
+      <!-- ASPA ABAJO -->
+      <ellipse cx="0"
+               cy="42"
+               rx="15"
+               ry="46"
+               fill="currentColor"/>
 
-      <ellipse cx="-38" cy="0"
-               rx="42"
-               ry="14"
-               fill="#22c55e"/>
+      <!-- ASPA IZQUIERDA -->
+      <ellipse cx="-42"
+               cy="0"
+               rx="46"
+               ry="15"
+               fill="currentColor"/>
 
     </g>
 
   </g>
 
-  <!-- Centro -->
+  <!-- CENTRO -->
   <circle cx="150"
           cy="150"
           r="24"
           fill="#14532d"/>
 
-  <!-- LED -->
+  <!-- LED ESTADO -->
   <circle cx="225"
-          cy="80"
+          cy="78"
           r="14"
-          fill="#22c55e"
+          fill="currentColor"
           filter="url(#glow)">
 
     <animate attributeName="opacity"
@@ -84,5 +94,29 @@
              repeatCount="indefinite"/>
 
   </circle>
+
+  <!-- BASE -->
+  <rect x="115"
+        y="235"
+        width="70"
+        height="22"
+        rx="6"
+        fill="#475569"/>
+
+  <!-- CONEXION IZQUIERDA -->
+  <rect x="8"
+        y="138"
+        width="50"
+        height="24"
+        rx="8"
+        fill="#64748b"/>
+
+  <!-- CONEXION DERECHA -->
+  <rect x="242"
+        y="138"
+        width="50"
+        height="24"
+        rx="8"
+        fill="#64748b"/>
 
 </svg>
