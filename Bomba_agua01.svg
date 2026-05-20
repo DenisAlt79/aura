@@ -1,0 +1,88 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- Cuerpo -->
+  <circle cx="150"
+          cy="150"
+          r="95"
+          fill="#334155"
+          stroke="#22c55e"
+          stroke-width="8"/>
+
+  <!-- Aro -->
+  <circle cx="150"
+          cy="150"
+          r="65"
+          fill="none"
+          stroke="#22c55e"
+          stroke-width="4"
+          opacity="0.5"/>
+
+  <!-- Aspas -->
+  <g transform="translate(150 150)">
+
+    <g>
+
+      <animateTransform attributeName="transform"
+                         type="rotate"
+                         from="0"
+                         to="360"
+                         dur="3s"
+                         repeatCount="indefinite"/>
+
+      <ellipse cx="0" cy="-38"
+               rx="14"
+               ry="42"
+               fill="#22c55e"/>
+
+      <ellipse cx="38" cy="0"
+               rx="42"
+               ry="14"
+               fill="#22c55e"/>
+
+      <ellipse cx="0" cy="38"
+               rx="14"
+               ry="42"
+               fill="#22c55e"/>
+
+      <ellipse cx="-38" cy="0"
+               rx="42"
+               ry="14"
+               fill="#22c55e"/>
+
+    </g>
+
+  </g>
+
+  <!-- Centro -->
+  <circle cx="150"
+          cy="150"
+          r="24"
+          fill="#14532d"/>
+
+  <!-- LED -->
+  <circle cx="225"
+          cy="80"
+          r="14"
+          fill="#22c55e"
+          filter="url(#glow)">
+
+    <animate attributeName="opacity"
+             values="1;0.2;1"
+             dur="1s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+</svg>
