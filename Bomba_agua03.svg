@@ -1,0 +1,103 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- CUERPO -->
+  <circle cx="150"
+          cy="150"
+          r="95"
+          fill="#334155"
+          stroke="#64748b"
+          stroke-width="8"/>
+
+  <!-- ARO -->
+  <circle cx="150"
+          cy="150"
+          r="68"
+          fill="none"
+          stroke="context-fill"
+          stroke-width="5"
+          opacity="0.8"/>
+
+  <!-- ASPAS -->
+  <g transform="translate(150 150)">
+
+    <g>
+
+      <animateTransform attributeName="transform"
+                         type="rotate"
+                         from="0"
+                         to="360"
+                         dur="2.5s"
+                         repeatCount="indefinite"/>
+
+      <ellipse cx="0"
+               cy="-42"
+               rx="15"
+               ry="46"
+               fill="context-fill"/>
+
+      <ellipse cx="42"
+               cy="0"
+               rx="46"
+               ry="15"
+               fill="context-fill"/>
+
+      <ellipse cx="0"
+               cy="42"
+               rx="15"
+               ry="46"
+               fill="context-fill"/>
+
+      <ellipse cx="-42"
+               cy="0"
+               rx="46"
+               ry="15"
+               fill="context-fill"/>
+
+    </g>
+
+  </g>
+
+  <!-- CENTRO -->
+  <circle cx="150"
+          cy="150"
+          r="24"
+          fill="#14532d"/>
+
+  <!-- LED -->
+  <circle cx="225"
+          cy="78"
+          r="14"
+          fill="context-fill">
+
+    <animate attributeName="opacity"
+             values="1;0.2;1"
+             dur="1s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- BASE -->
+  <rect x="115"
+        y="235"
+        width="70"
+        height="22"
+        rx="6"
+        fill="#475569"/>
+
+  <!-- TUBERIA IZQ -->
+  <rect x="8"
+        y="138"
+        width="50"
+        height="24"
+        rx="8"
+        fill="#64748b"/>
+
+  <!-- TUBERIA DER -->
+  <rect x="242"
+        y="138"
+        width="50"
+        height="24"
+        rx="8"
+        fill="#64748b"/>
+
+</svg>
